@@ -1,6 +1,33 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 import { AUTH_ENDPOINT, BASEURL } from "../..";
 
+/**
+ * @description
+ * This is a test suite for the sign up feature
+ *
+ * Given I am seeing the sign up form
+ * - Here, we visit the sign up page and click the sign up button
+ * - We also check if the toast is not visible
+ *
+ *
+ * When I create an invalid account
+ * - Here, we fill the form with invalid data and submit
+ *
+ *
+ * When I create a valid account
+ * - Here, we fill the form with valid data and submit
+ *
+ *
+ * When I am seeing the sign in form
+ * - Here, we click the sign in button
+ *
+ *
+ * Then I see a toast
+ * - Here, we check if the toast is visible
+ *
+ *
+ */
+
 Given("I am seeing the sign up form", () => {
   cy.visit(BASEURL + AUTH_ENDPOINT);
   cy.contains("button", "Sign Up").click();

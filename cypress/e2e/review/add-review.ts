@@ -1,6 +1,29 @@
 import { Given, Then, When } from "@badeball/cypress-cucumber-preprocessor";
 import { BASEURL } from "../..";
 
+/**
+ * @description
+ *
+ * This is a test suite for the review feature
+ *
+ * Given The total reviews is a number
+ * - Here, we visit the home page and get the total number of reviews
+ *
+ *
+ * When I add a review
+ * - Here, we click the add review button and fill the form with valid data
+ *
+ *
+ * Then a toast should appear
+ * - Here, we check if the toast is visible
+ *
+ *
+ * Then after 5s the total number would be that initial number plus one
+ * - Here, we wait for 5s and check if the total number of reviews has increased by one
+ *
+ *
+ */
+
 Given("The total reviews is a number", function () {
   cy.visit(BASEURL);
   cy.get("p.font-semibold.text-center.text-cyan-950")
